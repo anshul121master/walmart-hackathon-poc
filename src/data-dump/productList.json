@@ -1,0 +1,222 @@
+[
+  {
+    "productId": 1,
+    "productName": "Product 1",
+    "productDescription": "Description of Product 1",
+    "imgUrl": "https://example.com/image1.jpg",
+    "mrp": 10.99,
+    "discountPercentage": 20,
+    "brandName": "Brand 1",
+    "productCategory": "Category 1",
+    "inStock": true
+  },
+  {
+    "productId": 2,
+    "productName": "Product 2",
+    "productDescription": "Description of Product 2",
+    "imgUrl": "https://example.com/image2.jpg",
+    "mrp": 15.99,
+    "discountPercentage": 15,
+    "brandName": "Brand 2",
+    "productCategory": "Category 2",
+    "inStock": true
+  },
+  {
+    "productId": 3,
+    "productName": "Product 3",
+    "productDescription": "Description of Product 3",
+    "imgUrl": "https://example.com/image3.jpg",
+    "mrp": 9.99,
+    "discountPercentage": 25,
+    "brandName": "Brand 3",
+    "productCategory": "Category 1",
+    "inStock": false
+  },
+  {
+    "productId": 4,
+    "productName": "Product 4",
+    "productDescription": "Description of Product 4",
+    "imgUrl": "https://example.com/image4.jpg",
+    "mrp": 29.99,
+    "discountPercentage": 10,
+    "brandName": "Brand 2",
+    "productCategory": "Category 3",
+    "inStock": true
+  },
+  {
+    "productId": 5,
+    "productName": "Product 5",
+    "productDescription": "Description of Product 5",
+    "imgUrl": "https://example.com/image5.jpg",
+    "mrp": 12.99,
+    "discountPercentage": 30,
+    "brandName": "Brand 1",
+    "productCategory": "Category 2",
+    "inStock": true
+  },
+  {
+    "productId": 6,
+    "productName": "Product 6",
+    "productDescription": "Description of Product 6",
+    "imgUrl": "https://example.com/image6.jpg",
+    "mrp": 14.99,
+    "discountPercentage": 18,
+    "brandName": "Brand 3",
+    "productCategory": "Category 1",
+    "inStock": true
+  },
+  {
+    "productId": 7,
+    "productName": "Product 7",
+    "productDescription": "Description of Product 7",
+    "imgUrl": "https://example.com/image7.jpg",
+    "mrp": 11.99,
+    "discountPercentage": 12,
+    "brandName": "Brand 2",
+    "productCategory": "Category 2",
+    "inStock": true
+  },
+  {
+    "productId": 8,
+    "productName": "Product 8",
+    "productDescription": "Description of Product 8",
+    "imgUrl": "https://example.com/image8.jpg",
+    "mrp": 19.99,
+    "discountPercentage": 20,
+    "brandName": "Brand 1",
+    "productCategory": "Category 3",
+    "inStock": true
+  },
+  {
+    "productId": 9,
+    "productName": "Product 9",
+    "productDescription": "Description of Product 9",
+    "imgUrl": "https://example.com/image9.jpg",
+    "mrp": 8.99,
+    "discountPercentage": 15,
+    "brandName": "Brand 3",
+    "productCategory": "Category 2",
+    "inStock": false
+  },
+  {
+    "productId": 10,
+    "productName": "Product 10",
+    "productDescription": "Description of Product 10",
+    "imgUrl": "https://example.com/image10.jpg",
+    "mrp": 22.99,
+    "discountPercentage": 10,
+    "brandName": "Brand 2",
+    "productCategory": "Category 1",
+    "inStock": true
+  },
+  {
+    "productId": 11,
+    "productName": "Product 11",
+    "productDescription": "Description of Product 11",
+    "imgUrl": "https://example.com/image11.jpg",
+    "mrp": 16.99,
+    "discountPercentage": 25,
+    "brandName": "Brand 1",
+    "productCategory": "Category 3",
+    "inStock": true
+  },
+  {
+    "productId": 12,
+    "productName": "Product 12",
+    "productDescription": "Description of Product 12",
+    "imgUrl": "https://example.com/image12.jpg",
+    "mrp": 13.99,
+    "discountPercentage": 20,
+    "brandName": "Brand 3",
+    "productCategory": "Category 2",
+    "inStock": true
+  },
+  {
+    "productId": 13,
+    "productName": "Product 13",
+    "productDescription": "Description of Product 13",
+    "imgUrl": "https://example.com/image13.jpg",
+    "mrp": 17.99,
+    "discountPercentage": 15,
+    "brandName": "Brand 2",
+    "productCategory": "Category 1",
+    "inStock": true
+  },
+  {
+    "productId": 14,
+    "productName": "Product 14",
+    "productDescription": "Description of Product 14",
+    "imgUrl": "https://example.com/image14.jpg",
+    "mrp": 21.99,
+    "discountPercentage": 10,
+    "brandName": "Brand 1",
+    "productCategory": "Category 3",
+    "inStock": true
+  },
+  {
+    "productId": 15,
+    "productName": "Product 15",
+    "productDescription": "Description of Product 15",
+    "imgUrl": "https://example.com/image15.jpg",
+    "mrp": 9.99,
+    "discountPercentage": 30,
+    "brandName": "Brand 3",
+    "productCategory": "Category 2",
+    "inStock": true
+  },
+  {
+    "productId": 16,
+    "productName": "Product 16",
+    "productDescription": "Description of Product 16",
+    "imgUrl": "https://example.com/image16.jpg",
+    "mrp": 11.99,
+    "discountPercentage": 25,
+    "brandName": "Brand 2",
+    "productCategory": "Category 1",
+    "inStock": true
+  },
+  {
+    "productId": 17,
+    "productName": "Product 17",
+    "productDescription": "Description of Product 17",
+    "imgUrl": "https://example.com/image17.jpg",
+    "mrp": 14.99,
+    "discountPercentage": 15,
+    "brandName": "Brand 1",
+    "productCategory": "Category 3",
+    "inStock": false
+  },
+  {
+    "productId": 18,
+    "productName": "Product 18",
+    "productDescription": "Description of Product 18",
+    "imgUrl": "https://example.com/image18.jpg",
+    "mrp": 18.99,
+    "discountPercentage": 20,
+    "brandName": "Brand 3",
+    "productCategory": "Category 2",
+    "inStock": true
+  },
+  {
+    "productId": 19,
+    "productName": "Product 19",
+    "productDescription": "Description of Product 19",
+    "imgUrl": "https://example.com/image19.jpg",
+    "mrp": 16.99,
+    "discountPercentage": 10,
+    "brandName": "Brand 2",
+    "productCategory": "Category 1",
+    "inStock": true
+  },
+  {
+    "productId": 20,
+    "productName": "Product 20",
+    "productDescription": "Description of Product 20",
+    "imgUrl": "https://example.com/image20.jpg",
+    "mrp": 18.99,
+    "discountPercentage": 15,
+    "brandName": "Brand 3",
+    "productCategory": "Category 3",
+    "inStock": true
+  }
+]
