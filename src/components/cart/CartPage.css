@@ -1,0 +1,143 @@
+/* CartPage.css */
+
+.cart-page {
+  display: flex;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  justify-content: space-between;
+}
+
+.products-section {
+  flex: 1;
+  margin-top: 100px; /* Increase the margin-top value to create more space */
+  margin-bottom: 50px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.product-details {
+  display: flex;
+  align-items: center;
+}
+
+.product-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 16px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ddd;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 8px;
+}
+
+.product-quantity {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.summary-section {
+  width: 30%;
+  background-color: #f9f9f9;
+  padding: 16px;
+  margin-top: 100px; /* Increase the margin-top value to create more space */
+  margin-bottom: 50px;
+}
+
+.summary-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.summary-details {
+  margin-bottom: 16px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.summary-label {
+  font-size: 16px;
+  color: #333;
+}
+
+.summary-value {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 768px) {
+  .cart-page {
+    flex-direction: column;
+  }
+
+  .products-section {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .summary-section {
+    width: 100%;
+  }
+}
