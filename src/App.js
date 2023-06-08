@@ -7,11 +7,15 @@ import { CartProvider} from "./components/context/CartContext";
 import { LoaderProvider } from "./components/context/LoaderContext";
 import { SignInProvider } from "./components/context/SignInContext";
 import { UserProvider } from "./components/context/UserContext";
+import { ProductListProvider } from "./components/context/ProductListContext";
+import { OfferListProvider } from "./components/context/OffersContext";
 import { useState, useEffect } from "react";
 import CartPage from "./components/cart";
 
 function App() {
   return (
+    <OfferListProvider>
+    <ProductListProvider>
     <CartProvider>
       <SignInProvider>
         <UserProvider>
@@ -28,6 +32,8 @@ function App() {
     </UserProvider>
     </SignInProvider>
     </CartProvider>
+    </ProductListProvider>
+    </OfferListProvider>
   );
 }
 

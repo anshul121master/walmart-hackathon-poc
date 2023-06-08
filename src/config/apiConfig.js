@@ -1,17 +1,20 @@
-const url = "";
+const url = "http://172.28.242.53:8080";
+
 
 export const api ={
-    login: () => `${url}/v1/login`,
-    logout: () => `${url}/v1/logout`,
-    profile: () => `${url}/v1/users`,
+    login: () => `${url}/login/user`,
+    logout: () => `${url}/logout`,
+    profile: () => `${url}/profile/user`,
     orderHistory: () => `${url}/v1/orders`,
     membershipOffers: () => `${url}/v1/membershipOffers`,
+    allProducts: () => `${url}/product/allListings`
 }
 
 export const mockApi = {
-    login: () => './data/login.json',
+    login: () => '../data-dump/login.json',
     logout: () => '/data/logout.json',
-    profile: () => './data/profile.json',
-    orderHistory: () => './data/orderHistory.json',
-    membershipOffers: () => `${url}/v1/membershipOffers.json`,
+    profile: () => '../data-dump/profile.json',
+    orderHistory: () => '../data-dump/orderHistory.json',
+    membershipOffers: () => `../data-dump/membershipOffers.json`,
+    allProducts: () => `../data-dump/productList.json`
 }

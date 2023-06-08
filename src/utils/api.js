@@ -1,6 +1,6 @@
 import { api, mockApi } from "../config/apiConfig";
 
-export const mockEnabled = true; // set true to test changes with local json else false.
+export const mockEnabled = false; // set true to test changes with local json else false.
 const endpoints = mockEnabled ? mockApi : api;
 
 //api's for user journey
@@ -49,5 +49,10 @@ export const getProfile = () => {
 
 export const getOrderHistory = () => {
   const url = endpoints.orderHistory();
+  return fetch(url).then((res) => res.json());
+}
+
+export const getAllProducts = () => {
+  const url = endpoints.allProducts();
   return fetch(url).then((res) => res.json());
 }

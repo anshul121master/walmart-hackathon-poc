@@ -1,0 +1,12 @@
+{
+  "data": {
+    "email": "abc@walmart.com",
+    "name": "ABC",
+    "success": true,
+    "member": true
+  },
+  "error": {
+    "message": null,
+    "exception": null
+  }
+}
