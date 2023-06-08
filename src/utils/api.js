@@ -47,6 +47,11 @@ export const getProfile = () => {
   });
 };
 
+export const getOffers = (isMember) => {
+  const url = endpoints.offers(isMember);
+  return fetch(url).then((res) => res.json());
+}
+
 export const getOrderHistory = () => {
   const url = endpoints.orderHistory();
   return fetch(url).then((res) => res.json());

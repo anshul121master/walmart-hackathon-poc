@@ -6,11 +6,11 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (item) => {
-    const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
+    const existingItem = cartItems.find((cartItem) => cartItem.productId === item.productId);
     if (existingItem) {
       const updatedItem = { ...existingItem, quantity: existingItem.quantity + 1 };
       setCartItems((prevItems) =>
-        prevItems.map((cartItem) => (cartItem.id === item.id ? updatedItem : cartItem))
+        prevItems.map((cartItem) => (cartItem.productId === item.productId ? updatedItem : cartItem))
       );
     } else {
       const newItem = { ...item, quantity: 1 };
@@ -20,7 +20,7 @@ export const CartProvider = ({ children }) => {
   };
   
   const removeFromCart = (item) => {
-    setCartItems((prevItems) => prevItems.filter((i) => i.id !== item.id));
+    setCartItems((prevItems) => prevItems.filter((i) => i.productId !== item.productId));
   };
   const updateQuantity = (itemId, newQuantity) => {
     const updatedCartItems = cartItems.map((item) => {

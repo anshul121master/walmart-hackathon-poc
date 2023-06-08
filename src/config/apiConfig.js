@@ -6,7 +6,7 @@ export const api ={
     logout: () => `${url}/logout`,
     profile: () => `${url}/profile/user`,
     orderHistory: () => `${url}/v1/orders`,
-    membershipOffers: () => `${url}/v1/membershipOffers`,
+    offers: (isMember) => `${url}/profile/offers?isMember=${isMember}`,
     allProducts: () => `${url}/product/allListings`
 }
 
@@ -15,6 +15,7 @@ export const mockApi = {
     logout: () => '/data/logout.json',
     profile: () => '../data-dump/profile.json',
     orderHistory: () => '../data-dump/orderHistory.json',
+    offers: () => `../data-dump/offers.json`,
     membershipOffers: () => `../data-dump/membershipOffers.json`,
     allProducts: () => `../data-dump/productList.json`
 }
