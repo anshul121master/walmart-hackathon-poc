@@ -41,6 +41,17 @@ const CartIcon = ({ cartCount }) => {
   );
 };
 
+const ProfileIcon = () => {
+  return (
+    <Link to="/profile" >
+    <AccountCircleIcon
+                    className="margin15"
+                    style={{ fontSize: "2.5em" }}
+                  />
+                  </Link>
+  )
+}
+
 const drawerWidth = 240;
 const styles = (theme) => ({
   logo: {
@@ -175,15 +186,13 @@ const Header = ({ classes, cartCount }) => {
                 {authedUser.data.imageUrl ? (
                   <Avatar
                     alt="user"
-                    src={"/df"}
+                    src={"/"}
+                    link
                     style={{ backgroundColor: "#F5F4F2", color: headerText }}
                     className="margin15"
                   />
                 ) : (
-                  <AccountCircleIcon
-                    className="margin15"
-                    style={{ fontSize: "2.5em" }}
-                  />
+                  <ProfileIcon/>
                 )}
                 <Typography className="margin15" variant="body1">
                   Hi {authedUser.data.userName.split(" ")[0]}

@@ -11,6 +11,8 @@ import { ProductListProvider } from "./components/context/ProductListContext";
 import { OfferListProvider } from "./components/context/OffersContext";
 import { useState, useEffect } from "react";
 import CartPage from "./components/cart";
+import ProfilePage from "./components/profile/profile";
+
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
         <Route path="/ip/:id" element={<ProductDetailPage />} />
         <Route path="/login" element={<SignIn />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/profile" element={<ProfilePage/>} />
       </Routes>
     </Router>
     </LoaderProvider>

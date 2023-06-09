@@ -29,22 +29,25 @@ export const logout = () => {
 };
 
 
-export const getProfile = () => {
-  const url = endpoints.profile();
-  return fetch(url).then((resp) => {
-    if (resp.ok) {
-      return resp.json().then(({ response }) => ({
-        status: resp.status,
-        response
-      }))
-    }
-    else {
-      return resp.json().then(({ exception }) => ({
-        status: resp.status,
-        exception
-      }))
-    }
-  });
+export const getProfile = (email,isMember) => {
+  const apiUrl = endpoints.profile();
+   const requestData = {
+      email: email,
+      isMember: isMember
+    };
+  
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify(requestData)
+    };
+  
+    return fetch(apiUrl, requestOptions).then(resp => resp.json());
+  
+  
 };
 
 export const getOffers = (isMember) => {
