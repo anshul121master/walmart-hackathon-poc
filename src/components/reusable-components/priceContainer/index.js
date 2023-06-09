@@ -15,11 +15,18 @@ const PriceLabel = styled.span`
   text-decoration: ${(props) => props.textDecoration};
 `;
 
-const PriceContainer = ({ discountedPrice, mrp, discount, inStock }) => {
+export const calcDiscount = (mrp, discount) => {
+  const discountAmount = (mrp * discount) / 100;  
+  return discountAmount;
+}
+
+const PriceContainer = ({ mrp, discount, inStock }) => {
+  mrp = Math.ceil(mrp);
+  const discountedPrice = calcDiscount(mrp, discount);
   return (
     <Container>
       <PriceLabel fontSize="17px" fontWeight="bold" color="#000000">
-        ₹{discountedPrice}
+        ${Math.ceil(mrp - discountedPrice)}
       </PriceLabel>
       <PriceLabel
         fontSize="15px"
@@ -27,7 +34,7 @@ const PriceContainer = ({ discountedPrice, mrp, discount, inStock }) => {
         color="#878787"
         textDecoration="line-through"
       >
-        ₹{mrp}
+        ${mrp}
       </PriceLabel>
       <PriceLabel fontSize="14px" color="#388e3c" fontWeight="bold">
         {discount}% off

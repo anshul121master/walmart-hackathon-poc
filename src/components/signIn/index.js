@@ -76,7 +76,7 @@ const SignIn = ({ classes }) => {
       password,
     };
     login(userCredentials).then((res) => {
-      if (res.data) {
+      if (res.data.success) {
         signIn();
         handleAuthedUser(res);
       } else {

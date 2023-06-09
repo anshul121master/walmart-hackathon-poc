@@ -1,13 +1,12 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Button } from "@material-ui/core";
-import { Link } from "react-router-dom";
-import productImage from "../../assets/images/tshirt.jpeg";
 import { useLocation, useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import Header from "../header";
 import styled from "styled-components";
 import PriceContainer from "../reusable-components/priceContainer";
+import { hostUrl } from "../../config/apiConfig";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -63,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ProductBrandName = styled(Typography)`
+export const ProductBrandName = styled(Typography)`
   && {
     color: #000000;
     font-size: 22px;
@@ -71,7 +70,7 @@ const ProductBrandName = styled(Typography)`
     margin-bottom: 10px;
   }
 `;
-const ProductTitle = styled(Typography)`
+export const ProductTitle = styled(Typography)`
   && {
     color: #878787;
     font-size: 18px;
@@ -86,14 +85,12 @@ const ButtonWrapper = styled.div`
   margin-top: 10px;
 `;
 const ProductDescription = styled.section`
-  border: 2px solid red;
   padding: 3px;
   margin-top: 10px;
   margin-bottom: 10px;
 `;
 export default function ProductDetails(props) {
   const { cartItems, addToCart } = useContext(CartContext);
-  console.log("cartItems=>", cartItems)
   const location = useLocation();
   const navigate = useNavigate();
   const productData = location.state?.productData;
@@ -109,7 +106,6 @@ export default function ProductDetails(props) {
     inStock,
     productCategory,
   } = productData;
-  const discountedPrice = location.state?.discountedPrice;
   const handleAddToWishlist = () => {};
   const isProductPresentInCart = (productId) => {
     if (cartItems.find((item) => item.productId === productId)) return true;
@@ -120,13 +116,12 @@ export default function ProductDetails(props) {
       <Header cartCount={cartItems?.length} />
       <div className={classes.container}>
         <div className={classes.imageContainer}>
-          <img src={productImage} alt="product-img" width="70%" height="100%" />
+          <img src={hostUrl+imgUrl} alt="product-img" width="70%" height="100%" />
         </div>
         <div className={classes.productDetailsContainer}>
           <ProductBrandName>{brandName}</ProductBrandName>
           <ProductTitle>{productName}</ProductTitle>
           <PriceContainer
-            discountedPrice={discountedPrice}
             mrp={mrp}
             discount={discountPercentage}
             inStock={inStock}

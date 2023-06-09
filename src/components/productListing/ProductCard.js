@@ -4,10 +4,10 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import productImage from "../../assets/images/tshirt.jpeg";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import PriceContainer from "../reusable-components/priceContainer";
+import { hostUrl } from "../../config/apiConfig" ;
 
 const ProductName = styled(Typography)`
   && {
@@ -27,18 +27,17 @@ const ProductCategory = styled(Typography)`
 
 export default function ProductCard({ productData }) {
   const { productId, productName, imgUrl, mrp, discountPercentage, brandName, inStock } = productData;
-  const discountedPrice = mrp - (mrp * discountPercentage) / 100;
   return (
     <Card sx={{ maxWidth: 345 }}>
       <Link
         style={{ textDecoration: "none" }}
         to={`/ip/${productId}`}
-        state={{ productData, discountedPrice }}
+        state={{ productData }}
       >
         <CardActionArea>
           <CardMedia
             component="img"
-            image={productImage}
+            image={`${hostUrl+imgUrl}`}
             alt="clothing-tshirts"
           />
           <CardContent>
@@ -46,7 +45,7 @@ export default function ProductCard({ productData }) {
             <ProductCategory>
              {productName}
             </ProductCategory>
-            <PriceContainer discountedPrice={discountedPrice} mrp={mrp} discount={discountPercentage} inStock={inStock} />
+            <PriceContainer mrp={mrp} discount={discountPercentage} inStock={inStock} />
           </CardContent>
         </CardActionArea>
       </Link>

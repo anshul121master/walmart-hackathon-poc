@@ -4,7 +4,6 @@ export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
   const [authedUser, setAuthedUser] = useState(null);
-
   const handleAuthedUser = (loggedInUser) => {
     setAuthedUser(loggedInUser);
   };

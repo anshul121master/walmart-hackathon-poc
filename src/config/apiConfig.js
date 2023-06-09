@@ -1,13 +1,13 @@
-const url = "http://172.28.242.53:8080";
+export const hostUrl = "http://172.28.239.165:8080";
 
 
 export const api ={
-    login: () => `${url}/login/user`,
-    logout: () => `${url}/logout`,
-    profile: () => `${url}/profile/user`,
-    orderHistory: () => `${url}/v1/orders`,
-    offers: (isMember) => `${url}/profile/offers?isMember=${isMember}`,
-    allProducts: () => `${url}/product/allListings`
+    login: () => `${hostUrl}/login/user`,
+    logout: () => `${hostUrl}/logout`,
+    profile: () => `${hostUrl}/profile/user`,
+    orderHistory: () => `${hostUrl}/v1/orders`,
+    offers: (isMember) => `${hostUrl}/profile/offers?isMember=${isMember}`,
+    allProducts: () => `${hostUrl}/product/allListings`
 }
 
 export const mockApi = {
